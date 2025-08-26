@@ -1,0 +1,48 @@
+MODEL: UNET_no_preprocess_with_crop_v3
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.9253662824630737
+jaccard: 0.8369399645619532
+euclidean: 38.674432257880014
+precision: 0.8792218273317649
+recall: 0.9482560660863361
+
+MODEL: UNET_no_preprocess_with_crop_v3_posprocessed
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.8050837516784668
+jaccard: 0.8433273427648562
+euclidean: 23771.228354526098
+precision: 0.8895226821568086
+recall: 0.48546942855844066
+
+MODEL: UNET_with_preprocess_no_crop_v5
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.9300572872161865
+jaccard: 0.8210322875362294
+euclidean: 39.46670311653139
+precision: 0.958829688707809
+recall: 0.8518691755994572
+
+MODEL: UNET_with_preprocess_no_crop_v5_posprocessed
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.8226451277732849
+jaccard: 0.8192296661431615
+euclidean: 21541.973735013715
+precision: 0.9618595211811589
+recall: 0.4583179873025986
+
+MODEL: UNET_with_preprocess_no_crop_v5_posprocessed
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.9318264126777649
+jaccard: 0.8192296661431615
+euclidean: 39.586268109111785
+precision: 0.9618595211811589
+recall: 0.8477191868582273
+
+MODEL: UNET_no_preprocess_with_crop_v3_posprocessed
+FILES: ['133_cvc.jpg', '419_cvc.jpg', '480_cvc.jpg', 'cju1cfhyg48bb0799cl5pr2jh_kev.jpg']
+ssim: 0.8855924010276794
+jaccard: 0.7377009430143301
+euclidean: 52.42629156153539
+precision: 0.8501659900049401
+recall: 0.876430461893404
+
