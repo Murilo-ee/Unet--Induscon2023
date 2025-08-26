@@ -2,6 +2,10 @@
 
 Projeto para **segmentação semântica** de pólipos em imagens endoscópicas usando **U-Net**. 
 Os datasets utilizados são CVC-ClinicDB e Kvasir-SEG.
+
+Esses códigos fazem parte da pesquisa publicada no INDUSCON 2023 com os seguintes DOI
+https://doi.org/10.1109/INDUSCON58041.2023.10374688 - Unet
+https://doi.org/10.1109/INDUSCON58041.2023.10374674 - VIsion Transformer ( os codigos não estão aqui pois nao participei deles)
 ---
 
 ## Objetivo
