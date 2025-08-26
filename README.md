@@ -1,7 +1,7 @@
-# Segmentação de Pólipos com U-Net (Induscon/LA-CCI 2023)
+# Segmentação de Pólipos com U-Net (Induscon 2023)
 
-Projeto para **segmentação semântica** de pólipos em imagens endoscópicas usando **U-Net**. O repositório organiza **pré-processamento**, **modelagem**, **treinamento**, **pós-processamento** e **avaliação** em módulos independentes, visando reprodutibilidade e fácil adaptação.
-
+Projeto para **segmentação semântica** de pólipos em imagens endoscópicas usando **U-Net**. 
+Os datasets utilizados são CVC-ClinicDB e Kvasir-SEG.
 ---
 
 ## Objetivo
@@ -11,7 +11,7 @@ Projeto para **segmentação semântica** de pólipos em imagens endoscópicas u
 
 ---
 
-## Principais funcionalidades
+## Descrição
 - **Pré-processamento**:
   - Remoção de **reflexos especulares** e ruídos com OpenCV (grayscale + limiar adaptado, dilatação e **inpainting**).
   - **Normalização de iluminação** (morphological operations).
@@ -30,18 +30,35 @@ Projeto para **segmentação semântica** de pólipos em imagens endoscópicas u
   - Métricas implementadas: **SSIM**, **Jaccard/IoU**, **Precision**, **Recall** (e utilitários para **MSE**, Dice).
   - Relatórios e gráficos consolidados (curvas de aprendizado; sumários em CSV).
 - **Inferência**:
-  - Lote de imagens em `TEST_IMAGES/` → salvamento de **máscaras preditas** e métricas por amostra/conjunto.
+  - Lote de imagens em `TEST_IMAGES/` → salvamento de máscaras e métricas por amostra.
 
 ---
 
+
 ## Estrutura
 
-UNET_TensorFlow_v3.py # definição e treino da U-Net (TF/Keras) + callbacks
-check_model_performance.py # inferência e cálculo de métricas em TEST_IMAGES
-complement_functions.py # utilitários de métricas, IO e mascaramento
-preprocess_pipeline.py # remoção de reflexos, normalização de iluminação, patchify
-preprocessing_images.py # pipeline de preparação em lote
-README.txt # instruções originais de uso/treino
+| Caminho | Função |
+|---|---|
+| `UNET_TensorFlow_v3.py` | Treino U-Net (TF/Keras) + callbacks |
+| `UNET_TensorFlow_v2.py` | Versão anterior da U-Net |
+| `apply_model.py` | Inferência em lote (gera máscaras preditas) |
+| `check_model_performance.py` | Métricas em `TEST_IMAGES` |
+| `complement_functions.py` | Utilitários: métricas, I/O, mascaramento |
+| `convert_format_and_size.py` | Conversão de formato/tamanho de imagens |
+| `get_information_about_datasets.py` | Inspeção/contagem de imagens e máscaras |
+| `output_article.py` | Geração de figuras/relatórios |
+| `preprocess_pipeline.py` | Remoção de reflexos, normalização de iluminação, patchify |
+| `preprocessing_images.py` | Preparação em lote (pré-processamento) |
+| `segmentation_models_pytorch.py` | Utilidades SMP (arquiteturas/pesos) |
+| `video_frames_extractor.py` | Extração de frames de vídeos |
+| `requirements.txt` | Dependências |
+| `README.txt` | Instruções originais de uso/treino |
+| `models/` | Modelos treinados (pesos) |
+| `pretrained_models/` | Pesos pré-treinados (quando aplicável) |
+| `history/` | Logs CSV do treinamento |
+| `output_midia/` | Figuras/plots/resultados |
+| `tmp/` | Arquivos temporários |
+
 
 
 ---
